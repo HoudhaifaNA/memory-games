@@ -11,7 +11,7 @@ export default function Button({ variant, size, children, onClick }: ButtonProps
   return (
     <button
       className={clsx(
-        'cursor-pointer rounded border p-1.5 text-center text-xs  font-bold capitalize text-white transition-all active:scale-95 md:p-2.5 md:text-sm',
+        'cursor-pointer rounded border p-1.5 text-center text-sm  font-bold capitalize text-white transition-all active:scale-95 md:p-2.5 md:text-base',
         variant === 'secondary' ? 'bg-amber-600 hover:bg-amber-700' : 'bg-indigo-700 hover:bg-indigo-800',
         size === 'contain' ? 'w-full' : ''
       )}
