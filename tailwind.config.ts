@@ -7,7 +7,20 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        'sm-30': 'repeat(6, 60px)',
+        'md-30': 'repeat(5, 80px)',
+        'sm-36': 'repeat(6, 50px)',
+        'md-36': 'repeat(6, 80px)',
+      },
+      gridTemplateColumns: {
+        'sm-30': 'repeat(5, 60px)',
+        'md-30': 'repeat(6, 80px)',
+        'sm-36': 'repeat(6, 50px)',
+        'md-36': 'repeat(6, 80px)',
+      },
+    },
   },
   plugins: [],
 };
