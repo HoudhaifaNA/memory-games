@@ -43,9 +43,7 @@ export default function CardsList() {
   return (
     <div
       className={clsx(
-        `mx-auto mt-12 grid h-max w-max  gap-1  md:gap-2`,
-        gridTemplate &&
-          `grid-cols-sm-${gridTemplate} grid-rows-sm-${gridTemplate} md:grid-cols-md-${gridTemplate} md:grid-rows-md-${gridTemplate}`
+        `mx-auto mt-12  grid h-max w-max grid-cols-sm-36 grid-rows-sm-36 gap-1 md:grid-cols-md-36  md:grid-rows-md-36  md:gap-2`
       )}
     >
       {pairedCards.map((card) => {
