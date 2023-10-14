@@ -6,22 +6,14 @@ import Card from './Card';
 import useSetupContext from '@/hooks/useSetupContext';
 import useCardsContext from '@/hooks/useCardsContext';
 import useScoreContext from '@/hooks/useScoreContext';
-import { generatePairedCards } from '@/utils';
 
 export default function CardsList() {
   const { setup } = useSetupContext();
   const { setScore, setCurrentTurn, score, currentTurn } = useScoreContext();
-  const { flippedCards, setFlippedCards, matchedCards, setMatchedCards, pairedCards, setPairedCards } =
-    useCardsContext();
+  const { flippedCards, setFlippedCards, matchedCards, setMatchedCards, pairedCards } = useCardsContext();
 
   const { grid, players } = setup;
   const { first, match } = flippedCards;
-
-  const totalIconPairs = grid / 2;
-
-  useEffect(() => {
-    setPairedCards(generatePairedCards(totalIconPairs));
-  }, []);
 
   useEffect(() => {
     if (first && match) {
