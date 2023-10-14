@@ -1,9 +1,10 @@
 import clsx from 'clsx';
+import { ReactNode } from 'react';
 
 interface ButtonProps {
   variant: 'primary' | 'secondary';
   size: 'fit' | 'contain';
-  children: string;
+  children: ReactNode;
   onClick: () => void;
 }
 
