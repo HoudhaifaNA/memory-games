@@ -41,14 +41,18 @@ export default function CardsList() {
   }, [first, match]);
 
   return (
-    <div
-      className={clsx(
-        `mx-auto mt-12  grid h-max w-max grid-cols-sm-36 grid-rows-sm-36 gap-1 md:grid-cols-md-36  md:grid-rows-md-36  md:gap-2`
+    <>
+      {grid && (
+        <div
+          className={clsx(
+            `mx-auto mt-12  grid h-max w-max grid-cols-sm-${grid} grid-rows-sm-${grid} gap-1 md:grid-cols-md-${grid}  md:grid-rows-md-${grid}  md:gap-2`
+          )}
+        >
+          {pairedCards.map((card) => {
+            return <Card key={card.id} card={card} />;
+          })}
+        </div>
       )}
-    >
-      {pairedCards.map((card) => {
-        return <Card key={card.id} card={card} />;
-      })}
-    </div>
+    </>
   );
 }
