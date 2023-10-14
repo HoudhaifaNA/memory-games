@@ -7,7 +7,6 @@ export const ICON_NAMES = [
   'shortcake',
   'avocado',
   'cherries',
-  'doughnut',
   'backpack',
   'calendar',
   'bear',
@@ -17,4 +16,5 @@ export const ICON_NAMES = [
   'cupcake',
   'cookie',
   'cheese-wedge',
+  'pineapple',
 ];
