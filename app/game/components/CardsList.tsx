@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import clsx from 'clsx';
@@ -42,7 +43,7 @@ export default function CardsList() {
   return (
     <div
       className={clsx(
-        `mx-auto mt-12  grid grid-cols-sm-${setup.grid} grid-rows-sm-${setup.grid} md:grid-cols-md-${setup.grid} md:grid-rows-md-${setup.grid} h-max w-max  gap-1  md:gap-2`
+        `mx-auto mt-12  grid h-max w-max grid-cols-sm-36 grid-rows-sm-36 gap-1 md:grid-cols-md-36  md:grid-rows-md-36  md:gap-2`
       )}
     >
       {pairedCards.map((card) => {
