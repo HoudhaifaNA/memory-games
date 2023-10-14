@@ -10,7 +10,7 @@ export default function ScoreTooltip({ isActive, title, content }: ScoreTooltipP
   return (
     <div
       className={clsx(
-        'flex h-16 w-16 flex-col justify-between rounded px-2 py-1 md:h-auto md:w-36 md:gap-3 md:px-4 md:py-2',
+        'flex h-16 w-20 flex-col justify-between rounded px-2 py-1 md:h-auto md:w-36 md:gap-3 md:px-4 md:py-2',
         isActive ? 'bg-amber-600' : 'bg-indigo-200'
       )}
     >
