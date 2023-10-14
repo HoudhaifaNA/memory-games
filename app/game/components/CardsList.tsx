@@ -14,6 +14,7 @@ export default function CardsList() {
 
   const { grid, players } = setup;
   const { first, match } = flippedCards;
+  const gridTemplate = grid === 36 ? '36' : '30';
 
   useEffect(() => {
     if (first && match) {
@@ -43,7 +44,8 @@ export default function CardsList() {
     <div
       className={clsx(
         `mx-auto mt-12 grid h-max w-max  gap-1  md:gap-2`,
-        grid && `grid-cols-sm-${grid} grid-rows-sm-${grid} md:grid-cols-md-${grid} md:grid-rows-md-${grid}`
+        gridTemplate &&
+          `grid-cols-sm-${gridTemplate} grid-rows-sm-${gridTemplate} md:grid-cols-md-${gridTemplate} md:grid-rows-md-${gridTemplate}`
       )}
     >
       {pairedCards.map((card) => {
