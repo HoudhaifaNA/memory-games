@@ -36,7 +36,7 @@ export default function CardsList() {
 
       setTimeout(() => {
         setFlippedCards({});
-      }, 700);
+      }, 1000);
     }
   }, [first, match]);
 
